@@ -1,0 +1,228 @@
+.container1 {
+    max-width: 80%;
+    padding: 20px;
+    margin-left: 10;
+    position: relative;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.sub-title span {
+    color: #19d2db;
+}
+.Technical-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bar {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.bar i {
+    font-size: 2rem;
+    color: inherit;
+}
+
+.info span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.progress-line {
+    width: 80%;
+    height: 8px;
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.progress-line span {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    animation: progress-animation 1.5s ease-in-out;
+}
+.progress-line.html span {
+    width: 90%;
+    background-color: #c95d2e;
+}
+
+.progress-line.CSS span {
+    width: 80%;
+    background-color: #147bbc;
+}
+
+.progress-line.JavaScript span {
+    width: 75%;
+    background-color: #b0bc1e;
+}
+
+.progress-line.React span {
+    width: 70%;
+    background-color: #69bcbc;
+}
+
+.progress-line.Java span {
+    width: 60%;
+    background-color: #ff5733;
+}
+
+.progress-line.Cplusplus span {
+    width: 50%;
+    background-color: #147bbc;
+}
+@keyframes progress-animation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+}
+.container2 {
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10%;
+    justify-content: space-between;
+}
+
+.heading2 {
+    grid-column: span 2;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+}
+.radial-bars {
+    position: relative;
+    width: 100%; 
+    height: 200px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.radial-bars svg {
+    width: 100%;
+    height: 100%;
+}
+
+.progress-bar-bg {
+    fill: none;
+    stroke: #333;
+    stroke-width: 10;
+    opacity: 0.2;
+}
+
+.progress-bar {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 502; 
+    stroke-dashoffset: 502;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+.radial-bars:nth-child(1) .progress-bar {
+    stroke: #c95d2e;
+    animation: progress-animation 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.radial-bars:nth-child(2) .progress-bar {
+    stroke: #147bbc;
+    animation: progress-animation-65 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.radial-bars:nth-child(3) .progress-bar {
+    stroke: #b0bc1e;
+    animation: progress-animation-75 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.radial-bars:nth-child(4) .progress-bar {
+    stroke: #69bcbc;
+    animation: progress-animation-85 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+.percentage {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.text {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 5px;
+}
+@keyframes progress-animation {
+    from {
+        stroke-dashoffset: 502;
+    }
+    to {
+        stroke-dashoffset: calc(502 - (502 * 90) / 100);
+    }
+}
+
+@keyframes progress-animation-65 {
+    from {
+        stroke-dashoffset: 502;
+    }
+    to {
+        stroke-dashoffset: calc(502 - (502 * 65) / 100);
+    }
+}
+@keyframes progress-animation-75 {
+    from {
+        stroke-dashoffset: 502;
+    }
+    to {
+        stroke-dashoffset: calc(502 - (502 * 75) / 100);
+    }
+}
+@keyframes progress-animation-85 {
+    from {
+        stroke-dashoffset: 502;
+    }
+    to {
+        stroke-dashoffset: calc(502 - (502 * 85) / 100);
+    }
+}
+@media (max-width: 768px) {
+    .container2 {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
