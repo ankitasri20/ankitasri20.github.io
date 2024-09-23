@@ -30,7 +30,7 @@ section {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: transparent;
+    background-color: rgb(166, 0, 255);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,7 +105,10 @@ section {
     background: #0ef;
     color: #081b29;
     box-shadow: 0 0 20px #0ef;
-}
+    /* background-color: #0ef;
+    color: white;
+    transition: background-color 0.3s ease; */
+} 
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -227,7 +230,7 @@ p {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust based on how many columns you want */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     justify-content: center;
     padding: 20px;
@@ -272,24 +275,34 @@ p {
     color: #19d2db;
 }
 
+@media (max-width: 768px) {
+    .skills-container, .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .skills-container, .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
 .Project {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: flex-start; /* Align to the top */
-    min-height: 100vh; /* Ensure it takes up full height */
-    padding-top: 2rem; /* Optional: Add some padding to top */
+    align-items: center; 
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 2rem;
     text-align: center;
 }
 
 .Project h2 {
     margin: 0;
     padding: 1rem;
-    font-size: 2.5rem; /* Adjust as needed */
-    color: #ffffff; /* Change the color if necessary */
+    font-size: 2.5rem; 
+    color: #ffffff;
 }
 
 .projects-container {
@@ -297,7 +310,7 @@ p {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     width: 100%;
-    max-width: 1200px; /* Limit width of the project cards */
+    max-width: 1200px; 
     margin-top: 2rem;
 }
 
@@ -371,24 +384,24 @@ a {
 .Contact {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* Space between heading and icons */
-    height: 100vh; /* Full viewport height for the section */
+    justify-content: space-evenly;
+    height: 100vh;
     padding-top: 30px;
-    margin: 0; /* Ensure no extra margin on Contact section */
+    margin: 0;
   }
   
   .Contact h2 {
     font-size: 2.5rem;
     color: #0ef;
-    margin-top: 0; /* Ensure the heading is flush with the top */
+    margin-top: 0;
   }
   
   .contact-container {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Space between icons */
-    margin: 0; /* Remove space below the icons */
-    padding: 0; /* Ensure no extra padding */
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
   }
   
   .contact-link {
@@ -399,7 +412,7 @@ a {
     align-items: center;
     width: 70px;
     height: 70px;
-    border: 2px solid #00e7ff; /* Neon blue circle */
+    border: 2px solid #00e7ff;
     border-radius: 50%;
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -407,16 +420,15 @@ a {
   
   .contact-link i {
     font-size: 2rem;
-    margin: 0; /* Remove any default margin */
+    margin: 0; 
   }
   
   .contact-link:hover {
-    background-color: #00e7ff; /* Neon blue on hover */
+    background-color: #00e7ff; 
     color: #fff;
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1);
   }
-  
-  /* Responsive for smaller screens */
+
   @media (max-width: 768px) {
     .contact-container {
       flex-direction: column;
@@ -428,19 +440,26 @@ a {
       height: 60px;
     }
   }
+  @media (max-width: 768px) {
+    .skills-container, .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .skills-container, .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
   
 .footer {
-    /* background-color: #333; */
     color: #fff;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    /* background-image: linear-gradient(to right, #8e2de2, #4a00e0); */
 }
 
 .footer p {
      margin: center;
     font-size: 14px;
-    /* color: black; Adjust text color for visibility */
-    /* display: inline-block; */
 }
